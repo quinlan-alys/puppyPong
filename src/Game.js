@@ -1,5 +1,6 @@
 import Paddle from './Paddle'
 import  {player1Keys, player2Keys} from './keys'
+import Ball from  './Ball'
 
 export default class Game {
 
@@ -12,6 +13,7 @@ constructor() {
 
         this.p1 = new Paddle(this.height, 5, player1Keys)
         this.p2 = new Paddle(this.height, this.width -10, player2Keys)
+        this.ball = new Ball(this.height/2, this.width/2)
 	}
 
 	  drawLine() {
@@ -36,6 +38,8 @@ constructor() {
 	   this.drawBoard()
        this.p1.render(this.context)
        this.p2.render(this.context)
+       this.ball.render(this.context)
+       this.ball.render(this.context, this.player1, this.player2);
    }
 
 }
