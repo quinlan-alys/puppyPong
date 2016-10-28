@@ -4,12 +4,15 @@
    up: 38,
    down: 40,
 };
+
+// var ping = new Audio('patch/to/file') *** for sounds!!!
+// ping.play()
   
    export default class Paddle {
    constructor(boardHeight, x, keys) {
       this.width = 5;
       this.height = 50;
-      this.speed =20;
+      this.speed =10;
       this.boardHeight = boardHeight;
       this.keys = keys; 
       //this.color = color;
