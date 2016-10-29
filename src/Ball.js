@@ -1,4 +1,7 @@
 const size = 5;
+var pingPaddle = new Audio('85664__cgeffex__single-small-dog-angry-bark.mp3') ;
+var pingWall = new Audio('277058__kwahmah-02__single-dog-bark.wav');
+var pingScore = new Audio('350593__austinxyz__chihuahua-puppy-whine.wav');
 
 
 export default class Ball {
@@ -6,12 +9,11 @@ export default class Ball {
         this.boardWidth = boardWidth;
         this.boardHeight = boardHeight;
         this.ballReset()
-        this.vy = 1;//Math.floor(Math.random() * 12 - 6); // y direction
-        this.vx = 1;//(7 - Math.abs(this.vy)); // x direction 
+        this.vy = Math.floor(Math.random() * 12 - 6); // y direction
+        this.vx = (7 - Math.abs(this.vy)); // x direction 
         this.height = 10;
         this.width = 10;
         this.radius = 10;
-       // this.size = 10;
         this.speed = 1;
         
     }
@@ -23,15 +25,6 @@ export default class Ball {
         context.closePath;
     }
 
-
-    // bounce() {
-    //     if (this.y <= 0 + this.size || this.y >= this.boardHeight - this.size) {
-    //         this.vy *= -1
-    //     }
-    //         if (this.x <= 0 + this.size || this.x >= this.boardWidth - this.size) {
-    //         this.vx *= -1
-    //     }
-    // }
     goalRight(){
          if (this.x + this.radius >= this.boardWidth) {
              console.log("goal");
@@ -62,11 +55,13 @@ export default class Ball {
             if (this.x + this.radius <= 0){
                 this.ballReset();
                 p1Score.score++;
+                pingScore.play()
                 this.vx = (7 - Math.abs(this.vy));
             } else if  (this.x + this.radius >= this.boardWidth) {
                 this.ballReset();
                 p2Score.score++;
                 this.vx = (-7 - Math.abs(this.vy));
+                pingScore.play()
                 
             }
         }
@@ -77,6 +72,7 @@ export default class Ball {
            if (inRightEnd) {
                if (this.y >= p2.y && this.y <= (p2.y + p2.height)){
                    this.vx *= -1;
+                   pingPaddle.play()
                }
            }
        } else {
@@ -85,6 +81,7 @@ export default class Ball {
            if (inLeftEnd) {
                if (this.y >= p1.y && this.y <= (p1.y + p1.height)) {
                    this.vx *= -1;
+                   pingPaddle.play()
                }
            } 
        } 
@@ -93,7 +90,7 @@ export default class Ball {
 
 
         render(context, p1, p2, p1Score, p2Score) {
-            // this.bounce();
+          
             this.score(p1Score, p2Score);
             this.goalRight();
             this.goalLeft();    
@@ -109,21 +106,15 @@ export default class Ball {
 
 if (hitRight || hitLeft) {
      this.vx *= -1;
+     
    }
 
    if (hitTop || hitBottom) {
      this.vy *= -1;
+     pingWall.play();
    }
 
         }
-        //    render(ctx) {
-        //       //...
-        //       const hitLeft = this.x >= this.width;
-        //       const hitRight = this.x + this.size <= 0;
-        //       const hitTop = this.y + this.size <= 0;
-        //       const hitBottom = this.y >= this.height;
-        //       //...
-        //    }
-        /* ... */
+ 
     }
 

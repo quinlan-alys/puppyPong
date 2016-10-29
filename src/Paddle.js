@@ -5,8 +5,7 @@
    down: 40,
 };
 
-// var ping = new Audio('patch/to/file') *** for sounds!!!
-// ping.play()
+
   
    export default class Paddle {
    constructor(boardHeight, x, keys) {
