@@ -67,8 +67,9 @@ body {
    text-align: center;
    background-image: url("http://www.st-andrews.ac.uk/nightline/wp-content/uploads/puppies.jpeg");
 }
-h1 {
+.title {
    margin-top: 20px;
+   font-size: 24px;
 }
 #game {
    background-color: black;
@@ -77,9 +78,27 @@ h1 {
    margin: 20px auto;
    width: 512px;
 }
+
 .players {
-   display: inline-flex;
-   justify-content: space-between;
-   text-align: center;
-   width: 512px;
+    display:flex;
+    justify-content: space-between;
 }
+.player1 {
+    text-align: center;
+    margin-left: 365px;
+    width: 116px;
+}
+
+.player2 {
+   
+    text-align: center;
+    margin-right: 365px;
+    width: 116px;
+}
+
+.instr {
+    font-size: 10px;
+}
+
+
+

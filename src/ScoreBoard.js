@@ -11,13 +11,6 @@ export default class ScoreBoard {
       context.fillText(this.score, this.x, this.y);
    }
 
-//    scoreIncrement() {
-//        if (this.x + this.radius <= 0) {
-
-//        }
-//    }
-
-
 render(context) {
     this.drawScore(context);
 

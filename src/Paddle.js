@@ -14,7 +14,6 @@
       this.speed =10;
       this.boardHeight = boardHeight;
       this.keys = keys; 
-      //this.color = color;
       this.x = x;
       this.y = (boardHeight / 2) - (this.height / 2);
 
@@ -27,12 +26,12 @@
 keyListener(event){
          switch(event.keyCode) {
          case this.keys.up:
-         console.log('up');
+        
          this.moveUp();
          break;
 
          case this.keys.down:
-        console.log('down');
+        
          this.moveDown();
          break;
          
@@ -40,7 +39,7 @@ keyListener(event){
          };
  
    moveUp(){
-     //need an if statement so that it doesnt fly off screen
+     
      if (this.y >= 3){
      this.y -= this.speed;
      }
@@ -52,9 +51,8 @@ keyListener(event){
       }
    }
 
-   render(ctx) { // What is ctx? Where does it come from?
-    // context.fillStyle = this.color;
-      ctx.fillRect(
+   render(context) { 
+      context.fillRect(
          this.x, this.y,
          this.width, this.height );
         }

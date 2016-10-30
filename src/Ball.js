@@ -9,11 +9,11 @@ export default class Ball {
         this.boardWidth = boardWidth;
         this.boardHeight = boardHeight;
         this.ballReset()
-        this.vy = Math.floor(Math.random() * 12 - 6); // y direction
-        this.vx = (7 - Math.abs(this.vy)); // x direction 
+        this.vy = Math.floor(Math.random() * 12 - 6); 
+        this.vx = (7 - Math.abs(this.vy)); 
         this.height = 10;
         this.width = 10;
-        this.radius = 10;
+        this.radius = 7;
         this.speed = 1;
         
     }
@@ -27,7 +27,7 @@ export default class Ball {
 
     goalRight(){
          if (this.x + this.radius >= this.boardWidth) {
-             console.log("goal");
+           
              this.ballReset()
              this.vx = (-7 - Math.abs(this.vy));
          }
@@ -36,7 +36,7 @@ export default class Ball {
 
      goalLeft(){
          if (this.x + this.radius <= 0) {
-             console.log("goal Left!");
+            
              this.ballReset()
              this.vx = (7 - Math.abs(this.vy));
          }
@@ -46,9 +46,7 @@ export default class Ball {
     ballReset() {
         this.x = this.boardWidth / 2;
         this.y = this.boardHeight / 2;
-            // if (this.x + this.size >= this.boardWidth - this.size) {
-            //     console.log("goal");
-            // }
+          
         }
 
         score(p1Score, p2Score){
