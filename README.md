@@ -1,8 +1,7 @@
+
+![Alt text](puppypongpic.png)
 # Pong Game
-
-A basic pong game using HTML5 Canvas.
-
-## Setup
+Puppy Pong
 
 ##### Install
 
@@ -23,3 +22,14 @@ A basic pong game using HTML5 Canvas.
 * ▲ : up
 * ▼: down
 * /: fire a new ball
+
+# Languages Used
+ES2015
+HTML5 Canvas
+CSS
+
+
+# Learning Outcomes
+
+Through the process of creating this basic puppy pong game, I have developed an understanding of ES2015, and a further understanding of the fundamentals of buliding with programming languages. In addition, I have learned how to program with the object oriented method, and combine HTML5 to create a canvas. 
+
