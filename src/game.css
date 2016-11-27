@@ -51,18 +51,18 @@ table {
 
 @font-face {
     font-family: 'PressStart2P Web';
-    src: url('../fonts/pressstart2p-webfont.eot');
-    src: url('../fonts/pressstart2p-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/pressstart2p-webfont.woff2') format('woff2'),
-         url('../fonts/pressstart2p-webfont.woff') format('woff'),
-         url('../fonts/pressstart2p-webfont.ttf') format('truetype'),
-         url('../fonts/pressstart2p-webfont.svg#press_start_2pregular') format('svg');
+    src: url('../public/fonts/pressstart2p-webfont.eot');
+    src: url('../public/fonts/pressstart2p-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../public/fonts/pressstart2p-webfont.woff2') format('woff2'),
+         url('../public/fonts/pressstart2p-webfont.woff') format('woff'),
+         url('../public/fonts/pressstart2p-webfont.ttf') format('truetype'),
+         url('../public/fonts/pressstart2p-webfont.svg#press_start_2pregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 body {
    font-family: 'PressStart2P Web', monospace;
-   color: white;
+   color:white ;
    margin: 0 auto;
    text-align: center;
    background-image: url("http://www.st-andrews.ac.uk/nightline/wp-content/uploads/puppies.jpeg");
@@ -85,15 +85,13 @@ body {
 }
 .player1 {
     text-align: center;
-    margin-left: 365px;
-    width: 116px;
+    margin-left: 25%;
 }
 
 .player2 {
    
     text-align: center;
-    margin-right: 365px;
-    width: 116px;
+    margin-right: 25%;
 }
 
 .instr {

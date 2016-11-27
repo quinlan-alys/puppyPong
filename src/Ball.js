@@ -1,7 +1,7 @@
 const size = 5;
-var pingPaddle = new Audio('85664__cgeffex__single-small-dog-angry-bark.mp3') ;
-var pingWall = new Audio('277058__kwahmah-02__single-dog-bark.wav');
-var pingScore = new Audio('350593__austinxyz__chihuahua-puppy-whine.wav');
+var pingPaddle = new Audio('../sounds/85664__cgeffex__single-small-dog-angry-bark.mp3') ;
+var pingWall = new Audio('../sounds/277058__kwahmah-02__single-dog-bark.wav');
+var pingScore = new Audio('../sounds/350593__austinxyz__chihuahua-puppy-whine.wav');
 
 
 export default class Ball {

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "pong game",
   "license": "ISC",
-  "author": "Shawn McKay <shawn.j.mckay@gmail.com>",
+  "author": "Quinlan Deer <quinlan.deer@gmail.com",
   "main": "build/bundle.js",
   "scripts": {
     "start": "webpack && webpack-dev-server"
